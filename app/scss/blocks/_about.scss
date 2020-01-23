@@ -1,0 +1,32 @@
+.about {
+    background: url(../img/about-bg.png) center no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    padding: 35px 0 45px;
+
+    &__inner {
+        max-width: 545px;
+    }
+
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: #d3d2d2;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        &:after {
+            color: #303030;
+        }
+    }
+}

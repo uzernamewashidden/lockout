@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #5e5e5e;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.section {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title-box {
+        max-width: 520px;
+        padding-left: 140px;
+        position: relative;        
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: #ffc222;
+            left: 0;
+            top: 11px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #212020;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        letter-spacing: 0.1px;
+    }
+
+    &__btn {
+        color: #373636;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        padding: 5px 38px;
+        border: 3px solid #e6e6e6;
+    }
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 30px 8px 24px;
+    border: 1px solid #ffc222;
+    border-right-width: 20px;
+    position: relative;
+    outline: none;
+    &:after {
+        content: "\f105";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -12px; 
+    }
+}
+
+@media (max-width: 900px) {
+    .section {
+        &__top {
+            flex-direction: column;
+        }
+
+        &__title-box {
+            margin: 0 auto 30px;
+            padding: 0;
+            text-align: center;
+
+            &:before {
+                top: 35px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
+}
